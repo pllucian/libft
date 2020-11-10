@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pllucian <pllucian@21-school.ru>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/10 11:23:35 by pllucian          #+#    #+#             */
-/*   Updated: 2020/11/10 22:37:11 by pllucian         ###   ########.fr       */
+/*   Created: 2020/11/10 22:33:35 by pllucian          #+#    #+#             */
+/*   Updated: 2020/11/10 22:50:04 by pllucian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <string.h>
+void    *memcpy(void *dest, const void *src, size_t n)
+{
+	unsigned char	*p1;
+	unsigned char	*p2;
 
-void	*ft_memset(void *s, int c, size_t n);
-void	ft_bzero(void *s, size_t n);
-void    *memcpy(void *dest, const void *src, size_t n);
-
-#endif
+	p1 = (unsigned char*)dest;
+    p2 = (unsigned char*)src;
+	while(n != 0)
+	{
+		*p1++ = *p2++;
+		n--;
+	}
+	return dest;
+}
