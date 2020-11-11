@@ -6,7 +6,7 @@
 /*   By: pllucian <pllucian@21-school.ru>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/11 16:10:49 by pllucian          #+#    #+#             */
-/*   Updated: 2020/11/11 18:59:35 by pllucian         ###   ########.fr       */
+/*   Updated: 2020/11/11 22:30:13 by pllucian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	unsigned char	*p1;
-	unsigned char	*p2;
-	size_t			n;
+	char		*d;
+	const char	*s;
+	size_t		n;
 
-	p1 = (unsigned char*)dest;
-	p2 = (unsigned char*)src;
+	d = dest;
+	s = src;
 	n = size;
 	if (!src)
 		return (0);
 	if (n)
-		while (--n && (*p1++ = *p2++))
+		while (--n && (*d++ = *s++))
 			;
 	if (!n && size)
-		*p1 = '\0';
+		*d = '\0';
 	return (ft_strlen(src));
 }

@@ -6,7 +6,7 @@
 /*   By: pllucian <pllucian@21-school.ru>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/11 11:31:45 by pllucian          #+#    #+#             */
-/*   Updated: 2020/11/11 12:40:07 by pllucian         ###   ########.fr       */
+/*   Updated: 2020/11/11 22:22:04 by pllucian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char	*p1;
-	unsigned char	*p2;
+	unsigned char		*d;
+	const unsigned char	*s;
 
-	p1 = (unsigned char*)dest;
-	p2 = (unsigned char*)src;
+	d = (unsigned char*)dest;
+	s = (const unsigned char*)src;
 	if (dest == src)
 		return (dest);
-	if (p1 < p2)
+	if (d < s)
 	{
 		while (n--)
-			*p1++ = *p2++;
+			*d++ = *s++;
 	}
 	else
 	{
 		while (n--)
-			*(p1 + n) = *(p2 + n);
+			*(d + n) = *(s + n);
 	}
 	return (dest);
 }

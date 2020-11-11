@@ -1,28 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pllucian <pllucian@21-school.ru>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/10 23:36:29 by pllucian          #+#    #+#             */
-/*   Updated: 2020/11/11 22:22:52 by pllucian         ###   ########.fr       */
+/*   Created: 2020/11/11 21:32:50 by pllucian          #+#    #+#             */
+/*   Updated: 2020/11/12 00:30:22 by pllucian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	unsigned char		*d;
-	const unsigned char	*s;
+	char		*d;
+	const char	*s;
+	size_t		n;
+	size_t		len;
 
-	d = (unsigned char*)dest;
-	s = (const unsigned char*)src;
-	while (n--)
+	d = dest;
+	s = src;
+	n = size;
+	while (n-- && *d)
+		d++;
+	len = d - dest;
+	n = size - len;
+	if (!n--)
+		return (len + ft_strlen(s));
+	while (*s)
 	{
-		if ((*d++ = *s++) == (unsigned char)c)
-			return (d);
+		if (n)
+		{
+			*d++ = *s;
+			n--;
+		}
+		s++;
 	}
-	return (NULL);
+	*d = '\0';
+	return (len + (s - src));
 }
