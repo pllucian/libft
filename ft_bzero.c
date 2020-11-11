@@ -6,7 +6,7 @@
 /*   By: pllucian <pllucian@21-school.ru>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 21:25:05 by pllucian          #+#    #+#             */
-/*   Updated: 2020/11/11 00:51:54 by pllucian         ###   ########.fr       */
+/*   Updated: 2020/11/11 02:04:01 by pllucian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ void	ft_bzero(void *s, size_t n)
 	unsigned char	*p;
 
 	p = (unsigned char*)s;
-	while(n--)
-		*p++ = '\0';	
+	while (n--)
+		*p++ = '\0';
 }
