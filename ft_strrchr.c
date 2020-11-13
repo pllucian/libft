@@ -6,7 +6,7 @@
 /*   By: pllucian <pllucian@21-school.ru>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/13 14:02:38 by pllucian          #+#    #+#             */
-/*   Updated: 2020/11/13 14:14:53 by pllucian         ###   ########.fr       */
+/*   Updated: 2020/11/13 21:18:17 by pllucian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	const char	*p;
-
 
 	p = s;
 	while (*p)
