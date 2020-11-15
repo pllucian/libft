@@ -6,7 +6,7 @@
 /*   By: pllucian <pllucian@21-school.ru>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/13 11:46:38 by pllucian          #+#    #+#             */
-/*   Updated: 2020/11/13 13:09:48 by pllucian         ###   ########.fr       */
+/*   Updated: 2020/11/15 12:30:45 by pllucian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	const char	*p;
-
-	p = s;
-	while (*p && *p != (char)c)
-		p++;
-	return (*p == (char)c ? (char*)p : NULL);
+	while (*s && *s != (char)c)
+		s++;
+	return (*s == (char)c ? (char*)s : NULL);
 }
