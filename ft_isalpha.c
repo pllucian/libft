@@ -1,35 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pllucian <pllucian@21-school.ru>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/11 11:31:45 by pllucian          #+#    #+#             */
-/*   Updated: 2020/11/15 17:03:46 by pllucian         ###   ########.fr       */
+/*   Created: 2020/11/15 16:17:03 by pllucian          #+#    #+#             */
+/*   Updated: 2020/11/15 17:01:45 by pllucian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+int		ft_isalpha(int c)
 {
-	unsigned char		*d;
-	const unsigned char	*s;
-
-	d = (unsigned char*)dest;
-	s = (const unsigned char*)src;
-	if (d == s)
-		return (dest);
-	else if (d < s)
-	{
-		while (n--)
-			*d++ = *s++;
-	}
-	else
-	{
-		while (n--)
-			*(d + n) = *(s + n);
-	}
-	return (dest);
+	return (('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z'));
 }
