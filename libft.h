@@ -6,7 +6,7 @@
 /*   By: pllucian <pllucian@21-school.ru>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 11:23:35 by pllucian          #+#    #+#             */
-/*   Updated: 2020/11/19 16:48:44 by pllucian         ###   ########.fr       */
+/*   Updated: 2020/11/19 16:53:20 by pllucian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,6 @@ char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
 
 #endif
