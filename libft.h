@@ -6,7 +6,7 @@
 /*   By: pllucian <pllucian@21-school.ru>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 11:23:35 by pllucian          #+#    #+#             */
-/*   Updated: 2020/11/19 16:18:08 by pllucian         ###   ########.fr       */
+/*   Updated: 2020/11/19 16:48:44 by pllucian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <string.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
@@ -46,5 +47,6 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_putchar_fd(char c, int fd);
 
 #endif
