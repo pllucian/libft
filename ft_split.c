@@ -6,7 +6,7 @@
 /*   By: pllucian <pllucian@21-school.ru>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 22:11:42 by pllucian          #+#    #+#             */
-/*   Updated: 2020/11/19 13:34:55 by pllucian         ###   ########.fr       */
+/*   Updated: 2020/11/19 21:49:23 by pllucian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ static char		**ft_get_strs(const char *s, char c, size_t n)
 			s = p;
 		}
 	}
-	strs[i] = '\0';
+	strs[i] = NULL;
 	return (strs);
 }
 
