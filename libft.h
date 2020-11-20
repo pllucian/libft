@@ -6,7 +6,7 @@
 /*   By: pllucian <pllucian@21-school.ru>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 11:23:35 by pllucian          #+#    #+#             */
-/*   Updated: 2020/11/21 01:28:49 by pllucian         ###   ########.fr       */
+/*   Updated: 2020/11/21 02:28:50 by pllucian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,7 @@ void				ft_lstadd_back(t_list **lst, t_list *new);
 void				ft_lstdelone(t_list *lst, void (*del)(void*));
 void				ft_lstclear(t_list **lst, void (*del)(void*));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
+t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
+											void (*del)(void *));
 
 #endif
