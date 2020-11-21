@@ -6,7 +6,7 @@
 #    By: pllucian <pllucian@21-school.ru>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/10 10:52:07 by pllucian          #+#    #+#              #
-#    Updated: 2020/11/21 01:37:30 by pllucian         ###   ########.fr        #
+#    Updated: 2020/11/21 02:51:25 by pllucian         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,8 @@ NAME = libft.a
 
 CC = gcc
 
+AR = ar rcs
+
 RM = rm -f
 
 CFLAGS = -Wall -Wextra -Werror
@@ -38,13 +40,13 @@ CFLAGS = -Wall -Wextra -Werror
 			$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 $(NAME):	$(OBJS)
-			ar rc $(NAME) $(OBJS)
+			$(AR) $(NAME) $(OBJS)
 
 bonus:		$(OBJS) $(OBJS_BONUS)
-			ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
+			$(AR) $(NAME) $(OBJS) $(OBJS_BONUS)
 
 so:			$(OBJS) $(OBJS_BONUS)
-			$(CC) $(CFLAS) -shared -o $(NAME:.a=.so) $(OBJS) $(OBJS_BONUS)
+			$(CC) -shared -o libft.so $(OBJS) $(OBJS_BONUS)
 
 all:		$(NAME)
 
@@ -52,8 +54,7 @@ clean:
 			$(RM) $(OBJS) $(OBJS_BONUS)
 
 fclean:		clean
-			$(RM) $(NAME)
-			$(RM) $(NAME:.a=.so)
+			$(RM) $(NAME) $(NAME:.a=.so)
 
 re:			fclean all
 
