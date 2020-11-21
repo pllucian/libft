@@ -6,7 +6,7 @@
 #    By: pllucian <pllucian@21-school.ru>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/10 10:52:07 by pllucian          #+#    #+#              #
-#    Updated: 2020/11/21 02:51:25 by pllucian         ###   ########.fr        #
+#    Updated: 2020/11/21 13:53:40 by pllucian         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,17 +45,14 @@ $(NAME):	$(OBJS)
 bonus:		$(OBJS) $(OBJS_BONUS)
 			$(AR) $(NAME) $(OBJS) $(OBJS_BONUS)
 
-so:			$(OBJS) $(OBJS_BONUS)
-			$(CC) -shared -o libft.so $(OBJS) $(OBJS_BONUS)
-
 all:		$(NAME)
 
 clean:
 			$(RM) $(OBJS) $(OBJS_BONUS)
 
 fclean:		clean
-			$(RM) $(NAME) $(NAME:.a=.so)
+			$(RM) $(NAME)
 
 re:			fclean all
 
-.PHONY:		bonus so all clean fclean re
+.PHONY:		bonus all clean fclean re

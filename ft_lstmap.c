@@ -6,7 +6,7 @@
 /*   By: pllucian <pllucian@21-school.ru>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 01:38:46 by pllucian          #+#    #+#             */
-/*   Updated: 2020/11/21 02:27:11 by pllucian         ###   ########.fr       */
+/*   Updated: 2020/11/21 13:30:38 by pllucian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*first;
 	t_list	*new;
 
-	if (!lst || !f || !del)
+	if (!lst || !f)
 		return (NULL);
 	if (!(new = ft_lstnew(f(lst->content))))
 		return (NULL);
